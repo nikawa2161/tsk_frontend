@@ -11,6 +11,7 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 
 # 依存関係をインストールする
+RUN apk update && apk add bash
 RUN npm install
 
 # 残りのファイルをコピーする
